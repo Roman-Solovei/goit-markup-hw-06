@@ -511,7 +511,7 @@ img {
   align-items: center;
   color: var(--primary-color);
   font-family: Roboto, sans-serif;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: var(--accent-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
@@ -524,11 +524,11 @@ img {
   margin-left: 12px;
 }
 
-.footer-btn:hover,
+/* .footer-btn:hover,
 .footer-btn:focus {
   background-color: var(--accent-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 .email {
   font-family: Roboto, sans-serif;
@@ -707,6 +707,7 @@ img {
   height: 580px;
   background-color: var(--primary-color);
   border-radius: 4px;
+  padding: 40px;
 
   position: absolute;
   top: 50%;
@@ -748,25 +749,23 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--title-text-color);
-  margin: 40px 40px 30px 40px;
+  margin-bottom: 12px;
 }
 
-.form {
-  margin: 0 40px 20px 40px;
-}
+/* .form {
+  
+} */
 
 .form-field {
   position: relative;
   display: block;
   border-radius: 4px;
   border: none;
+  color: var(--primary-text-color);
+  text-align: left;
 }
 
-.form-field:not(:last-child) {
-  margin-bottom: 28px;
-}
-
-.form-field:focus-within > .field-icon {
+.input-icon:focus-within > .modal-icon {
   fill: var(--accent-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -775,13 +774,17 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-label {
+.input-icon {
+  display: block;
+  position: relative;
+  margin: 4px 0 10px 0;
+}
+
+.modal-icon {
   position: absolute;
-  top: 0;
-  left: 0;
-  padding-bottom: 4px;
-  color: var(--primary-text-color);
-  transform: translateY(-100%);
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
 }
 
 .form-input {
@@ -807,6 +810,7 @@ img {
 
 .textarea {
   height: 120px;
+  margin-top: 4px;
 }
 
 .textarea::placeholder {
@@ -821,7 +825,7 @@ img {
 .contract-check {
   display: flex;
   align-items: center;
-  margin-left: 52px;
+  justify-content: center;
 }
 
 .check-text {
@@ -851,15 +855,18 @@ img {
   height: 15px;
   border: 2px solid var(--title-text-color);
   border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-image: url("../images/check.svg");
+  background-position: 50% 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked + .check-icon {
   border-color: transparent;
   background-color: var(--accent-color);
-  background-image: url("../images/check.svg");
-  background-position: 50% 50%;
+  /* background-image: url("../images/check.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%; */
+
   background-origin: border-box;
 }
 
